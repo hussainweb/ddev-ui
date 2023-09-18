@@ -24,11 +24,12 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->id('admin')
-            ->path('admin')
+            ->id('dashboard')
+            ->path('/')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                // DDEV colors.
+                'primary' => Color::rgb('rgb(2,123,167)'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
