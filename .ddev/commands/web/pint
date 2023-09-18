@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run pint
+## Usage: pint
+## Example: ddev pint
+
+pint "$@"
