@@ -1,5 +1,12 @@
 name: PHP Linting
-on: pull_request
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - *
+  pull_request:
+
 jobs:
   phplint:
     runs-on: ubuntu-latest
