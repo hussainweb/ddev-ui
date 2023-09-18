@@ -2,7 +2,11 @@
     "name": "hussainweb/ddev-ui",
     "type": "project",
     "description": "A simple UI for DDEV.",
-    "keywords": ["ddev", "nativephp", "laravel"],
+    "keywords": [
+        "ddev",
+        "nativephp",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -37,7 +41,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
