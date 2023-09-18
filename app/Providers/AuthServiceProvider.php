@@ -24,7 +24,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->app['auth']->setUser(new User([
             'name' => get_current_user(),
-            'email' => ''
+            'email' => '',
         ]));
     }
 }
