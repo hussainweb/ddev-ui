@@ -16,7 +16,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "livewire/livewire": "^3.0"
+        "livewire/livewire": "^3.0",
+        "nativephp/electron": "^0.4.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
@@ -46,8 +47,14 @@
             "@php artisan package:discover --ansi",
             "@php artisan filament:upgrade"
         ],
+        "post-install-cmd": [
+            "cp \"$(which php)\" ./vendor/nativephp/php-bin/bin/mac/x86",
+            "cp \"$(which php)\" ./vendor/nativephp/php-bin/bin/mac/arm64"
+        ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "cp \"$(which php)\" ./vendor/nativephp/php-bin/bin/mac/x86",
+            "cp \"$(which php)\" ./vendor/nativephp/php-bin/bin/mac/arm64"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
