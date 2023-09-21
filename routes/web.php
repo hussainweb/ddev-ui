@@ -10,3 +10,5 @@
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/projects-mini', \App\Livewire\ListProjects::class)->name('projects.mini');
