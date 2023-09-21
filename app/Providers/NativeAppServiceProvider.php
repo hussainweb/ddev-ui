@@ -16,7 +16,9 @@ class NativeAppServiceProvider implements ProvidesPhpIni
     {
         MenuBar::create()
             ->route('projects.mini')
-            ->icon(base_path('resources/icons/DDEVIconTemplate.png'));
+            ->icon(base_path('resources/icons/DDEVIconTemplate.png'))
+            ->width(500)
+            ->height(600);
 
         Window::open()
             ->route('filament.dashboard.resources.projects.index')
