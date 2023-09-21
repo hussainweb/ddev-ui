@@ -30,7 +30,7 @@ class ProjectResource extends Resource
             ->columns([
                 TextColumn::make('name')->searchable()->sortable(),
                 TextColumn::make('status')->sortable(),
-                TextColumn::make('shortroot')->searchable()->sortable(),
+                TextColumn::make('shortroot')->searchable()->sortable()->visibleFrom('md'),
             ])
             ->filters([
                 //
